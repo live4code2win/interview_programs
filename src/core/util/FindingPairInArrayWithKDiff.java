@@ -31,17 +31,32 @@ public class FindingPairInArrayWithKDiff {
 		System.out.println("==================================================================================================");
 		
 		int iLeftMostElement = iArr[0];
-		int iRightMostElement = iArr[iArr.length];
+		int iRightMostElement = iArr[iArr.length-1];
 		//List<Integer> al = Arrays.asList(iArr);
 		
 		Integer[] iArr1 = new Integer[] {10,2,3,5,7,2,9,1};
 		List<Integer> list = Arrays.asList(new Integer[] {10,2,3,5,7,2,9,1});
 		TreeSet<Integer> set = new TreeSet<>(list);
+		System.out.println("Tree set => "+set);
 		//TreeSet<Integer> tsElements = new TreeSet<>(new ArrayList<>(Arrays.asList(iArr)));
-		
+		HashMap<String, Integer> mapResult = new HashMap<>();
+		int iConstant = 2;
 		String strAddedItems = ""; 
-		for (int i = 0; i < iArr.length; i++) {
-			
+		for (int i = 0; i < iArr1.length; i++) {
+			int iElement = iArr1[i];
+			//int iLeft = 0;
+			//int iRight = 0;
+			int iLeft = iElement - iConstant;
+			int iRight = iElement + iConstant;
+			if (set.contains(iLeft)) {
+				
+			}
+			if (set.contains(iRight)) {
+				
+			}
+			if (set.contains(iElement)) {
+				
+			}
 			
 		}
 		
