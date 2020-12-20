@@ -36,7 +36,7 @@ package core.util;
  *  ------------------------------------------------------------------------------------------------------------------------------------------------------
  *  
  *  ii. 
- *  Array, and `k` with the constant having difference. Find the pairs of numbers in array with difference constant `k`.
+ *  FindingPairInArrayWithKDiff => Array, and `k` with the constant having difference. Find the pairs of numbers in array with difference constant `k`.
  *  Using Map and TreeSet, Check in number present in TreeSet and left => element - k , right => element +k. check left and right 
  *  in the set and create the leftPair and rightPair and add in the hashmap.
  *  leftPair = (left, element)
