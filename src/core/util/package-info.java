@@ -34,6 +34,14 @@ package core.util;
  *  		1 ^ 0 	= 1
  *  		0 ^	1	= 1
  *  ------------------------------------------------------------------------------------------------------------------------------------------------------
- *  		
+ *  
+ *  ii. 
+ *  Array, and `k` with the constant having difference. Find the pairs of numbers in array with difference constant `k`.
+ *  Using Map and TreeSet, Check in number present in TreeSet and left => element - k , right => element +k. check left and right 
+ *  in the set and create the leftPair and rightPair and add in the hashmap.
+ *  leftPair = (left, element)
+ *  rightPair = (element, right)
+ *  
+ *  show the hashmap.keys() of map as it will show the added pairs and map.size() as number of pairs.	
  *  
  */
