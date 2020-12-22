@@ -20,7 +20,7 @@ public class FindingPairInArrayWithKDiff {
 		System.out.println("Tree  => "+set);
 		
 		HashMap<String, Integer> mapResult = new HashMap<>();
-		int iConstant = 1;
+		int iConstant = 2;
 		for (int i = 0; i < iArr1.length; i++) {
 			int iElement = iArr1[i];
 			int iLeft = iElement - iConstant;
@@ -36,7 +36,10 @@ public class FindingPairInArrayWithKDiff {
 				mapResult.put(rightPair, iElement);
 			}
 		}
+		TreeSet<String> set1 = new TreeSet<>(mapResult.keySet());
+		System.out.println("Set1 => "+set1);
 		System.out.println("Count => "+mapResult.size()+" paires => "+mapResult.keySet());
+		System.out.println("==================================================================================================");
 		System.out.println("******************************************* Main End *********************************************");
 	}
 
