@@ -44,6 +44,7 @@ package core.util;
  *  
  *  show the hashmap.keys() of map as it will show the added pairs and map.size() as number of pairs.	
  *  
+ *  iii. FindingDuplicateInArray => finding the duplicate in array in one loop, but need extra space for data structure as Set, or Map etc
  *  
  *  iv. InheritanceCallHirarchy => checking Base, Derived class method executions and method hiding. 
  *  Method hiding is the mechanism having child and parent same signature for static method
