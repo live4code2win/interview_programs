@@ -9,7 +9,6 @@ public class MergeSort {
 		//TODO :
 		/*
 		 * we will merge the sorted array.
-		 * 
 		 *  left_array => iLeftIndex To iMiddleIndex
 		 *  right_aaray => iMiddleIndex+1 To iRightIndex
 		 */
@@ -55,14 +54,12 @@ public class MergeSort {
 	}
 	
 	public static int [] sort(int [] array, int iLeftIndex, int iRightIndex) {
-		//System.out.println("left index => "+iLeftIndex+" right index => "+iRightIndex);
 		if (iLeftIndex < iRightIndex) {
 			int iMiddleIndex = (iLeftIndex+iRightIndex) / 2;
 			sort(array, iLeftIndex, iMiddleIndex);
 			sort(array, iMiddleIndex+1, iRightIndex);
 			merge(array, iLeftIndex, iMiddleIndex, iRightIndex);
 		}
-		//sSystem.out.println("Sort Recurrsion finished...");
 		return array;
 	}
 	
@@ -71,7 +68,6 @@ public class MergeSort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("====================== Main Merge Sort Algorithm =============================");
-		//int [] inputArray = {22,7,91,5,3,19,60,41,56,8};
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter no. of elements you want in array:");
         int iElements = sc.nextInt();
@@ -81,9 +77,9 @@ public class MergeSort {
         {
         	inputArray[i] = sc.nextInt();
         }
+        sc.close();
 		System.out.println("==============================================================================");
 		System.out.printf("Input Array => [");
-		//int [] inputArray = {2,7,1,5,3,9,0,4,6,8};
 		for (int i = 0; i < inputArray.length; i++) {
 			System.out.printf("%4d", inputArray[i]);
 		}
