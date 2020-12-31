@@ -64,6 +64,67 @@ public class MergeSort {
 	}
 	
 	
+	// Second approach	
+	public static int [] mergeSort(int []arr) {
+		int iLength = arr.length;
+		
+		if(iLength < 2) {
+			return arr;
+		}
+		
+		int iMid = iLength / 2;
+		
+		int leftArray[] = new int[iMid];
+		int rightArray[] = new int[iLength - iMid];
+		
+		for (int i = 0; i < iMid; i++) {
+			leftArray[i] = arr[i];
+		}
+		
+		for (int i = 0; i < (iLength-iMid) ; i++) {
+			rightArray[i] = arr[iMid + i];
+		}
+		
+		mergeSort(leftArray);
+		mergeSort(rightArray);			
+		merge1(arr, leftArray, rightArray);
+		
+		return arr;
+	}
+	
+	// Merge method of second approach
+	
+	public static int [] merge1(int [] result, int []leftArr, int []rightArr) {
+		int nL = leftArr.length;
+		int nR = rightArr.length;
+		
+		int i = 0; int j = 0; int k =0;
+		
+		while(i < nL && j < nR) {
+			if (leftArr[i] < rightArr[j]) {
+				result[k] = leftArr[i];
+				i++;
+			}else {
+				result[k] = rightArr[j];
+				j++;
+			}
+			k++;
+		}
+		
+		while(i < nL) {
+			result[k] = leftArr[i];
+			i++;
+			k++;
+		}
+		
+		while(j < nR) {
+			result[k] = rightArr[j];
+			j++;
+			k++;
+		}
+		return result;
+	}
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -87,7 +148,8 @@ public class MergeSort {
 		System.out.println();
 		System.out.println("==============================================================================");
 		System.out.printf("Sorted Array => [");
-		int [] resultArray =  sort(inputArray, 0, inputArray.length-1);
+		//int [] resultArray =  sort(inputArray, 0, inputArray.length-1); // First Approach
+		int [] resultArray = mergeSort(inputArray); // Second approach
 		for (int i = 0; i < resultArray.length; i++) {
 			System.out.printf("%4d", resultArray[i]);
 		}
